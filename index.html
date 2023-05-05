@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>first page</title>
+    <title>Document</title>
 </head>
 <style>
     *{
@@ -15,7 +15,7 @@
         font-size: xx-large;
         width: 100%;
         height: 100vh;
-        background-color:rgb(14, 139, 242);
+        background-color: #5c66f3;
         color: white;
         display: flex;
         justify-content: center;
@@ -27,14 +27,25 @@
     }
 </style>
 <body>
-    <div id="page">
+    <div id="page" onclick="changeBgColor()">
         <div id="info">
+            <p>click any where to change bg color</p>
             <h1>Hello Web Development</h1>
-            <br>
             <h3>I am AbdelRazek</h3>
-            <br>
             <h5>FronEnd Developer</h5>
         </div>
     </div>
 </body>
+<script>
+
+    function changeBgColor(){
+        var page = document.getElementById("page")
+        var r = (Math.random(Math.floor())*255)
+        var g = (Math.random(Math.floor())*255)
+        var b = (Math.random(Math.floor())*255)
+        page.style.backgroundColor = `rgb(${r}, ${g}, ${b},0.5)`
+        console.log(r, g, b)
+    }
+
+</script>
 </html>
